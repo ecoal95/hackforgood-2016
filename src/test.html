@@ -38,7 +38,7 @@ var total_route = [
 
 var flightPlanCoordinates;
 for (var i = 1; i < total_route.length; ++i) {
-    distance -= getDist(total_route[0].lat, total_route[0].lon, total_route[1].lan, total_route[1].lon);
+    distance -= getDist(total_route[i-1].lat, total_route[i-1].lon, total_route[i].lan, total_route[i].lon);
 }
 /*
         var flightPlanCoordinates = [
