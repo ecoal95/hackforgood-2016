@@ -23,9 +23,10 @@
   function routeMap(element, distance, route) {
     console.log("Before routeMap loop");
     var map = new google.maps.Map(element, {
-      zoom: 3,
+      zoom: 5,
       center: utils.average(route[0], route[route.length - 1]),
-      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      // mapTypeId: google.maps.MapTypeId.TERRAIN,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true
     });
 
@@ -56,7 +57,7 @@
       geodesic: true,
       strokeColor: '#FF0000',
       strokeOpacity: 1.0,
-      strokeWeight: 2
+      strokeWeight: 3
     })).setMap(map);
 
     if (second_line_points.length) {
@@ -64,8 +65,8 @@
         path: second_line_points,
         geodesic: true,
         strokeColor: '#333333',
-        strokeOpacity: 1.0,
-        strokeWeight: 2
+        strokeOpacity: 0.5,
+        strokeWeight: 3
       })).setMap(map);
     }
   }

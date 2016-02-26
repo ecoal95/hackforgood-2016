@@ -1,11 +1,15 @@
 (function() {
   var form = document.getElementById('main-form'),
-      input = form.querySelector('input'),
+      number_input = document.getElementById('number'),
+      multiplicator_input = document.getElementById('multiplicator'),
       result_bar = document.querySelector('.progress-bar');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    var kilometers = parseInt(input.value, 10);
+    var number = parseInt(number_input.value, 10);
+    var multiplicator = parseFloat(multiplicator_input.options[multiplicator_input.selectedIndex].value);
+
+    var kilometers = number * multiplicator;
 
     if (kilometers < 0)
       return;
