@@ -9,14 +9,22 @@
       {lat: 55.799531, lng: 37.63916}, // Cuarto punto Moscú
       {lat: 40.592543, lng: -74.003906} // Quinto punto Nueva York
     ],
-    SYRIA: [] // TODO
+    SYRIA: [
+      {lat: 33.456346, lng: 36.331787}, // Damascus
+      {lat: 31.954701, lng: 35.943146}, // Jordan
+      {lat: 30.04227, lng: 31.231384}, // Egypt
+      {lat: 26.99639, lng:14.449768}, // Libya
+      {lat: 27.962182, lng: -0.189514}, // Algeria
+      {lat: 35.741459, lng: -5.822754}, // Morocco
+      {lat: 40.400355, lng: -3.694153} // Madrid
+    ] // TODO
   };
 
   function routeMap(element, distance, route) {
     console.log("Before routeMap loop");
     var map = new google.maps.Map(element, {
       zoom: 3,
-      center: {lat: 0, lng: -180},
+      center: utils.average(route[0], route[route.length - 1]),
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       disableDefaultUI: true
     });

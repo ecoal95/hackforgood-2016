@@ -1,4 +1,16 @@
 window.utils = {
+  clamp: function(number, min, max) {
+    return Math.min(Math.max(number, min), max)
+  },
+
+  routeDistance: function(route) {
+    var distance = 0;
+    for (var i = 1; i < route.length; ++i) {
+      distance += utils.distance(route[i - 1], route[i]);
+    }
+    return distance;
+  },
+
   toRadians: function(deg) {
     return deg * Math.PI / 180;
   },
@@ -22,6 +34,9 @@ window.utils = {
   },
 
   average: function(point1, point2, reached_distance) {
+    if (reached_distance == null)
+      reached_distance = utils.distance(point1, point2) / 2;
+
     var total_distance = utils.distance(point1, point2);
     var percentage = reached_distance / total_distance;
 

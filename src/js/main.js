@@ -3,16 +3,22 @@
       input = form.querySelector('input'),
       result_bar = document.querySelector('.progress-bar');
 
-  console.log("form: " + form);
-
   form.addEventListener('submit', function(e) {
+    e.preventDefault();
     var kilometers = parseInt(input.value, 10);
 
-    console.log("KM: " + kilometers);
-    result_bar.style.width = "50%";
+    if (kilometers < 0)
+      return;
 
-    window.routeMap(document.getElementById('map'), kilometers, window.ROUTES.TEST);
-    e.preventDefault();
+    var route = window.ROUTES.SYRIA;
+    var total = utils.routeDistance(route);
+
+    var percentage = utils.clamp(kilometers / total * 100, 0, 100);
+
+    result_bar.style.width = percentage + "%";
+    result_bar.innerHTML = percentage.toFixed(2) + "%";
+
+    window.routeMap(document.getElementById('map'), kilometers, route);
   }, false);
 
 }());
