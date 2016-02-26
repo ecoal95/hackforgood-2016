@@ -10,6 +10,9 @@
 
     console.log("KM: " + kilometers);
     result_bar.style.width = "50%";
+
+    window.routeMap(document.getElementById('map'), kilometers, window.ROUTES.TEST);
     e.preventDefault();
   }, false);
+
 }());
