@@ -34,3 +34,8 @@ dist/index.html: src/index.html $(HTML_FILES)
 	@mkdir -p $(dir $@)
 	# cpp -nostdinc $< > $@
 	cp $< $@
+
+dist/%: src/%
+	@mkdir -p $(dir $@)
+	cp $< $@
+

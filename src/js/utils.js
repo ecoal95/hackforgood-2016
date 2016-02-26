@@ -11,6 +11,14 @@ window.utils = {
     return distance;
   },
 
+  scrollTo: function(hash) {
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 500, function(){
+       window.location.hash = hash;
+    });
+  },
+
   toRadians: function(deg) {
     return deg * Math.PI / 180;
   },

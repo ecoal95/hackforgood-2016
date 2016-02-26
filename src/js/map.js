@@ -21,7 +21,6 @@
   };
 
   function routeMap(element, distance, route) {
-    console.log("Before routeMap loop");
     var map = new google.maps.Map(element, {
       zoom: 5,
       center: utils.average(route[0], route[route.length - 1]),
@@ -55,9 +54,9 @@
     (new google.maps.Polyline({
       path: first_line_points,
       geodesic: true,
-      strokeColor: '#FF0000',
+      strokeColor: '#22e07e',
       strokeOpacity: 1.0,
-      strokeWeight: 3
+      strokeWeight: 9
     })).setMap(map);
 
     if (second_line_points.length) {
@@ -66,7 +65,7 @@
         geodesic: true,
         strokeColor: '#333333',
         strokeOpacity: 0.5,
-        strokeWeight: 3
+        strokeWeight: 9
       })).setMap(map);
     }
   }

@@ -5,37 +5,99 @@
 <link rel="stylesheet" href="css/bootstrap-theme.css">
 <link rel="stylesheet" href="css/style.css">
 
-<div class="container">
-  <div class="jumbotron text-center">
-    <h1>Run4Rights</h1>
-    <p>Calcula la distancia de Lorem Ipsum...</p>
+<div class="top">
+    <img class="logo" src="img/logo.png" alt="Run4Rights">
+
+    <h2>¿Hasta donde llegarías si corrieras...</h2>
+
+    <p class="button-wrapper">
+      <a class="btn btn-lg btn-dark scroll-to" href="#form">Haz la prueba</a>
+    </p>
+</div>
+
+<div class="form" id="form">
+  <div class="form-inner">
+    <h2>¿Hasta donde llegarías si corrieras...</h2>
     <form method="get" action="#" id="main-form">
-      <div class="form-group">
-        <input type="number" class="form-control" value="1" id="number" placeholder="">
-        <select id="multiplicator" class="form-control">
-          <option value="1">Kilómetros</option>
-          <option value="781">Caminos de Santiago Francés</option>
-          <option value="226">Iron Mans</option>
-          <option value="42">Maratones</option>
-        </select>
+      <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+          <div class="form-group">
+            <input type="text" class="form-control" value="1" id="number" placeholder="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <select id="multiplicator" class="form-control">
+              <option value="1">Kilómetros</option>
+              <option value="781">Caminos de Santiago Francés</option>
+              <option value="226">Iron Mans</option>
+              <option value="42">Maratones</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-success btn-block" type="submit">Calcular</button>
+        <button class="btn btn-lg btn-dark" type="submit">Calcular</button>
       </div>
     </form>
   </div>
 </div>
 
-<div class="container">
-  <div id="result">
-    <div class="result-bar progress">
-      <div class="progress-bar" role="progressbar" style="min-width: 2em;">
-        0%
-      </div>
-    </div>
-    <div id="map" style="height: 500px"></div>
+<div id="result" class="result">
+  <div class="result-inner">
+    <p class="result-text" id="result-text"></p>
+    <p class="more-info">
+      <a class="btn btn-lg btn-dark scroll-to" href="#info">Más información</a>
+    </p>
+    <p class="more-info">
+      <a class="btn btn-lg fb-link" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http://run4rights.net">Comparte</a>
+      <a class="btn btn-lg tw-link" target="_blank"
+        href="http://www.twitter.com/intent/tweet?url=http://run4rights.net">Tuitea</a>
+    </p>
   </div>
+  <div id="map" style="height: 500px; height: 95vh;"></div>
 </div>
+
+<div id="info" class="info container">
+  <h1>¿Cómo es el viaje de un refugiado sirio?</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Nullam feugiat convallis vehicula. Nunc laoreet est id
+  fermentum aliquam. Nullam ac consectetur erat, bibendum
+  euismod nulla. Phasellus eget elementum dolor. Nulla
+  dictum arcu magna, eu varius turpis mattis eget. Vivamus
+  at efficitur lectus. Quisque blandit gravida euismod.
+  Aenean nec euismod leo, ac placerat libero.
+
+  <p>Maecenas iaculis placerat fringilla. Ut diam purus,
+  blandit eget convallis non, condimentum nec turpis. Ut
+  eros risus, cursus nec hendrerit id, lacinia in urna. In
+  sit amet cursus enim, a faucibus ipsum. Mauris varius
+  imperdiet nibh, nec condimentum leo congue eu. In quis
+  pharetra eros. Praesent eget accumsan lorem. Sed laoreet
+  finibus nibh, venenatis scelerisque dui ultrices sit amet.
+  Aliquam auctor velit vel molestie dignissim. Pellentesque
+  ac eros non sapien luctus tincidunt id a erat.
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Nullam feugiat convallis vehicula. Nunc laoreet est id
+  fermentum aliquam. Nullam ac consectetur erat, bibendum
+  euismod nulla. Phasellus eget elementum dolor. Nulla
+  dictum arcu magna, eu varius turpis mattis eget. Vivamus
+  at efficitur lectus. Quisque blandit gravida euismod.
+  Aenean nec euismod leo, ac placerat libero.
+
+  <p>Maecenas iaculis placerat fringilla. Ut diam purus,
+  blandit eget convallis non, condimentum nec turpis. Ut
+  eros risus, cursus nec hendrerit id, lacinia in urna. In
+  sit amet cursus enim, a faucibus ipsum. Mauris varius
+  imperdiet nibh, nec condimentum leo congue eu. In quis
+  pharetra eros. Praesent eget accumsan lorem. Sed laoreet
+  finibus nibh, venenatis scelerisque dui ultrices sit amet.
+  Aliquam auctor velit vel molestie dignissim. Pellentesque
+  ac eros non sapien luctus tincidunt id a erat.
+</div>
+
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/utils.js"></script>
