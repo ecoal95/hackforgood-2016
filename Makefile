@@ -18,6 +18,10 @@ all: dist/index.html $(STYLESHEETS) $(IMAGES) $(JS)
 clean:
 	$(RM) -r dist/
 
+.PHONY: deploy
+deploy:
+	./deploy.sh
+
 dist/%.css: src/%.sass
 	@mkdir -p $(dir $@)
 	sass $< $@
