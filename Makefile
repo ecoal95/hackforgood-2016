@@ -11,7 +11,7 @@ JS := $(patsubst src/%, dist/%, $(JS))
 HTML_FILES := $(wildcard src/*.html)
 
 .PHONY: all
-all: dist/index.html $(STYLESHEETS) $(IMAGES) $(JS)
+all: dist/index.html dist/resume.pdf $(STYLESHEETS) $(IMAGES) $(JS)
 	@echo > /dev/null
 
 .PHONY: clean
